@@ -4,7 +4,7 @@ import Body from './components/Body';
 
 const App = () => {
   return (
-    <div>
+    <div className='app'>
         <Body/>
         <Header/>
     </div>

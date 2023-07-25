@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Progress = (props) => {
-const { bgcolor, completed } = props;
+
   return (
     <div>
     <div>
