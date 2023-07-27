@@ -78,11 +78,11 @@ const Header = () => {
   return (
     <div className='header'>
       <div className='day'>{today}</div>
+      <div className='currentDay'>{currentDay}</div>
       <div className='mesano'>
         <div className='month'>{month}</div>
         <div className='year'>{year}</div>
       </div>
-      <div className='currentDay'>{currentDay}</div>
     </div>
   )
 }

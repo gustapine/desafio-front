@@ -1,63 +1,94 @@
 body {
   margin: 0;
-
-  font-family: 'Roboto', sans-serif;
+  padding: 60px 30px 60px 30px;
+  font-family: 'Roboto', sans-serif !important;
 }
 
-
-
-
 .app {
-  padding: 60px 30px 60px 30px;
+  padding: 0px 0px 0px 0px;
 }
 
 .header {
-  border: 1px solid blue;
-  grid: "a" 200px "b" min-content;
+  border: 0px solid rgb(255, 0, 0);
+  height: 70px;
+  display: flex;
 }
 
-.mesano{
-  width: 10px;
-  display: inline;
+.mesano {
+  display: flex;
+  position: relative;
+  width: min-content;
+  flex-direction: column;
+  top: 0px;
+  left: -97px;
 }
 
 .day {
+  position: relative;
   font-size: 60px;
   text-align: left;
   font: normal normal medium 60px/79px Roboto;
   letter-spacing: 0px;
   color: #848484;
   opacity: 1;
+  width: min-content;
 }
 
 .month {
   text-align: left;
+  width: min-content;
   font: normal normal normal 24px/32px Roboto;
   letter-spacing: 0px;
   color: #848484;
   opacity: 1;
+  position: relative;
+  top: 5px;
 }
 
 .year {
-  top: 102px;
-  left: 103px;
+  top: 0px;
+  left: 0px;
   text-align: left;
-  font: normal normal 300 24px/32px Roboto;
+  font: normal normal 300 24px/32px Roboto !important;
   letter-spacing: 0px;
   color: #848484;
   opacity: 1;
+  position: relative;
+  width: min-content;
 }
 
 .currentDay {
-  top: 103px;
-  left: 217px;
-  height: 32px;
-  /* UI Properties */
-  text-align: left;
+  width: min-content;
+  height: min-content;
   font: normal normal normal 24px/32px Roboto;
-  letter-spacing: 0px;
   color: #848484;
   opacity: 1;
+  position: relative;
+  right: -133px;
+  top: 32px;
 }
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+  .app {
+    padding: 60px 200px 60px 200px;
+    height: max-content !important;
+  }
+
+  .header {
+    border: 0px solid rgb(255, 0, 0);
+    height: min-content;
+    display: flex;
+  }
+
+  .currentDay {
+    display: flex;
+    top: 35px;
+    right: -653px;
+    height: min-content;
+  }
+
+  .mesano {
+    top: 0px;
+    left: -98px;
+  }
+}
