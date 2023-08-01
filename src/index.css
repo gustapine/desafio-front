@@ -113,6 +113,42 @@ progress::-moz-progress-bar {
   height: 100%;
 }
 
+#Search {
+  height: 48px;
+  width: 100%;
+  font: normal normal normal 24px/32px Roboto;
+  font-size: 14px !important;
+  padding: 15px 15px 15px 15px;
+  border: 1px solid #DBDBDB;
+  border-radius: 4px;
+  margin-top: 25px;
+  background-image: url('../src/img/search.png'); 
+  background-repeat: no-repeat;
+  background-position: 280px center;
+  background-size: 20px;
+}
+
+.Filter{
+  display:flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.Done{
+  margin-right: 10px;
+}
+
+.Pending, .Done{
+  color: var(--cor-primaria);
+  font: normal normal normal 24px/32px Roboto;
+  display: inline;
+  font-size: 14px;
+  border: 1px solid #DBDBDB;
+  border-radius: 20px;
+  padding: 1px 10px 1px 10px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+}
+
 @media (min-width: 768px) {
   body {
     padding: 5rem 15rem 3rem 15rem;
