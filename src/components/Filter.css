@@ -1,0 +1,32 @@
+.Filter {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.Done {
+    margin-right: 10px;
+}
+
+.Pending,
+.Done {
+    color: var(--cor-primaria);
+    font: normal normal normal 24px/32px Roboto;
+    display: inline;
+    font-size: 14px;
+    border: 1px solid #DBDBDB;
+    border-radius: 20px;
+    padding: 1px 10px 1px 10px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+}
+
+.Pending:active{
+    background: 1px solid #4DA6B3;
+}
+
+@media (min-width: 768px) {
+    .Filter {
+        width: 25%;
+        justify-content: left;
+   }
+}

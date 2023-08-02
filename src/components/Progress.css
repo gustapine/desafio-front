@@ -1,0 +1,34 @@
+.progressDiv {
+    padding-top: 1rem;
+
+}
+
+progress {
+    width: 100%;
+    border-radius: 4px !important;
+    height: 24px;
+    position: relative;
+    background-color: #E4E4E4;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #E4E4E4;
+}
+
+progress::-moz-progress-bar {
+    background-color: #E4E4E4 0% 0% no-repeat padding-box;
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--cor-secundaria);
+}
+
+progress::-moz-progress-bar {
+    background-color: #E4E4E4 !important;
+}
+
+.progressContainer {
+    border-radius: 4px;
+    overflow: hidden;
+    height: 100%;
+}

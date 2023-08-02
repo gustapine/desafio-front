@@ -1,8 +1,8 @@
 import React from 'react'
-import Progress from './Progress'
+import './Header.css'
 
 const date = new Date();
-const today = date.getDate()
+const today = String(date.getDate()).padStart(2,'0')
 let year = date.getFullYear();
 let month;
 let currentDay;

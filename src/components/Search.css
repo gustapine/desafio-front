@@ -1,0 +1,29 @@
+#Search {
+    height: 48px;
+    width: 100%;
+    font: normal normal normal 24px/32px Roboto;
+    font-size: 14px !important;
+    padding: 15px 15px 15px 15px;
+    border: 1px solid #DBDBDB;
+    border-radius: 4px;
+    margin-top: 25px;
+    background-image: url('../img/search.png');
+    background-repeat: no-repeat;
+    background-position: 280px center;
+    background-size: 20px;
+}
+
+@media (min-width: 768px) {
+    .searchBar {
+        display: flex;
+        margin-right: -5px;
+        width: 65%;
+    }
+
+    #Search {
+        background-image: url('../img/search.png');
+        background-repeat: no-repeat;
+        background-position: 0 end;
+        background-size: 20px;
+    }
+}
