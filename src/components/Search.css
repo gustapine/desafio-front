@@ -1,5 +1,5 @@
 #Search {
-    height: 48px;
+    height: 40px;
     width: 100%;
     font: normal normal normal 24px/32px Roboto;
     font-size: 14px !important;
@@ -7,17 +7,23 @@
     border: 1px solid #DBDBDB;
     border-radius: 4px;
     margin-top: 25px;
-    background-image: url('../img/search.png');
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+}
+
+#Search::after {
+    background: url('../img/search.png');
     background-repeat: no-repeat;
     background-position: 280px center;
     background-size: 20px;
+    display: flex;
+    justify-content: end;
 }
 
 @media (min-width: 768px) {
     .searchBar {
-        display: flex;
-        margin-right: -5px;
         width: 65%;
+        margin-left:35%;
+        justify-content: end;
     }
 
     #Search {
