@@ -1,4 +1,4 @@
-.Filter {
+.filter {
     display: flex;
     justify-content: flex-end;
     margin-top: 10px;
@@ -21,14 +21,14 @@
     cursor: pointer;
 }
 
-.botao.selecionado {
+.botao.selecionadoPending {
     border:1px solid #4DA6B3;
     background: #F7F7F8 0% 0% no-repeat;
     display: flex;
     flex-direction: row;
 }
 
-.botao.selecionado::before{
+.botao.selecionadoPending::before{
     background: url('../img/verifica.png')center center / 100% 100% no-repeat;
     display: flex;
     flex-direction: row;
@@ -40,10 +40,26 @@
 }
 
 
+.botao.selecionadoDone {
+    border:1px solid #4DA6B3;
+    background: #F7F7F8 0% 0% no-repeat;
+    display: flex;
+    flex-direction: row;
+}
 
+.botao.selecionadoDone::before{
+    background: url('../img/verifica.png')center center / 100% 100% no-repeat;
+    display: flex;
+    flex-direction: row;
+    height: 15px;
+    width: 15px;
+    content: '';
+    margin-top:8px;
+    margin-right: 5px;
+}
 
 @media (min-width: 768px) {
-    .Filter {
+    .filter {
         display: flex;
         margin-top: -2.7vw;
         width: 25%;

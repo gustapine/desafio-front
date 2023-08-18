@@ -65,7 +65,7 @@ switch (parseInt(date.getDay())) {
     currentDay = "Thursday";
     break;
   case 5:
-    month = "Friday";
+    currentDay = "Friday";
     break;
   case 6:
     currentDay = "Saturday"

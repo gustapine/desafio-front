@@ -2,17 +2,23 @@ import React, {useState} from 'react'
 import './Filter.css'
 
 const Filter = () => {
-  const [selecionado , setIsSelected] = useState(false);
+  const [selecionadoDone, setIsSelectedDone] = useState(false);
+  const [selecionadoPending, setIsSelectedPending] = useState(false);
+  
   const handleButtonClick = () => {
-    setIsSelected(!selecionado);
-  };
+    setIsSelectedDone(!selecionadoDone);
+  }
+  const handleButtonClickPending = () =>{
+    setIsSelectedPending(!selecionadoPending)
+  }
+
 
   return (
-    <div className='Filter'>
-        <button className={`Done botao ${selecionado ? 'selecionado' : ''}`}
+    <div className='filter'>
+        <button className={`Done botao ${selecionadoDone ? 'selecionadoDone' : ''}`}
         onClick={handleButtonClick} id='botao'>Done</button>
-        <button className={`Pending botao ${selecionado ? 'selecionado' : ''}`}
-        onClick={handleButtonClick}>Pending</button>
+        <button className={`Pending botao ${selecionadoPending ? 'selecionadoPending' : ''}`}
+        onClick={handleButtonClickPending}>Pending</button>
     </div>
   )
 }
