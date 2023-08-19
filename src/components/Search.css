@@ -10,11 +10,11 @@
     background: #FFFFFF 0% 0% no-repeat padding-box;
 }
 
-#Search::after {
+#Search {
     background: url('../img/search.png');
     background-repeat: no-repeat;
-    background-position: 280px center;
-    background-size: 20px;
+    background-position: 95% 50%;
+    background-size: 18px;
     display: flex;
     justify-content: end;
 }
@@ -29,7 +29,7 @@
     #Search {
         background-image: url('../img/search.png');
         background-repeat: no-repeat;
-        background-position: 0 end;
-        background-size: 20px;
+        background-position: 98% 50%;
+        background-size: 18px;
     }
 }

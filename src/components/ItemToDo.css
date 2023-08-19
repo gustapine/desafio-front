@@ -1,0 +1,17 @@
+.itemCard {
+    border: 1px solid #DBDBDB;
+    border-radius: 4px;
+    height: 48px;
+    font: normal normal normal 14px/19px Roboto;
+    color: #848484;
+    background: #F4F4F4 0% 0% no-repeat padding-box;
+    text-align: left;
+    margin-bottom: 8px;
+    padding: 0px 14px 0px 14px;
+}
+
+@media (min-width: 768px) {
+    .itemCard {
+        font: normal normal normal 14px/19px Roboto;
+    }
+}

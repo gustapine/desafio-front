@@ -1,0 +1,10 @@
+.itemsList{
+    border: none;
+    margin-top: 16px;
+}
+
+@media (min-width: 768px) {
+    .itemsList{
+        border: 1px solid none;
+    }
+}
