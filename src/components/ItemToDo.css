@@ -1,17 +1,121 @@
+:root {
+    --main-color-item: #DBDBDB;
+    --second-color-item: #848484;
+    --third-color-item: #F4F4F4;
+    --fourth-color-item: #FFFF;
+    --red-color:#E34F4F;
+    --green-color:#5DE290;
+}
+
 .itemCard {
-    border: 1px solid #DBDBDB;
+    border: 1px solid var(--main-color-item);
     border-radius: 4px;
     height: 48px;
     font: normal normal normal 14px/19px Roboto;
-    color: #848484;
-    background: #F4F4F4 0% 0% no-repeat padding-box;
+    color: var(--second-color-item);
+    background: var(--third-color-item) 0% 0% no-repeat padding-box;
     text-align: left;
     margin-bottom: 8px;
     padding: 0px 14px 0px 14px;
+    cursor: pointer;
 }
 
 @media (min-width: 768px) {
     .itemCard {
         font: normal normal normal 14px/19px Roboto;
+    }
+
+    .itemCard.edit {
+        background: var(--fourth-color-item) 0% 0% no-repeat padding-box;
+        display: flex;
+        position: relative;
+    }
+
+    div.card-tooltip-none {
+        display: none;
+    }
+
+    #card-tooltip {
+        position: absolute;
+        background: var(--second-color-item);
+        box-shadow: 0 2px 7px rgb(0 0 0 / 20%);
+        background-color: var(--second-color-item) !important;
+        border-radius: 4px;
+        width: 86px !important;
+        height: 50px;
+        left: 360px;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        top: 30px;
+        transition: 1s ease-in-out;
+        z-index: 10000000;
+        color: white;
+        overflow:visible;
+    }
+
+    #card-tooltip::after {
+        background-color: var(--second-color-item);
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        transform: rotate(45deg) translateX(-50%);
+        bottom: 12px;
+        box-shadow: 5px 10px 5px rgb(0 0 0 / 0%);
+        visibility: visible;
+        opacity: 100;
+        left: 40px;
+        top: 0px;
+    }
+
+    #card-tooltip span {
+        font-size: 14px;
+        color: #ffffff;
+        font-weight: bold;
+    }
+
+    #card-tooltip>b {
+        font-weight: bold;
+    }
+
+    .buttonsCardDisplay{
+        display:none;
+    }
+
+    .buttonsCard {
+        position: absolute;
+        right: 0px;
+        height: 48px;
+        width: 100px;
+        border: none;
+        border-left: none;
+        position: absolute;
+        overflow: hidden;
+        border-radius:0px 4px 4px 0px;
+    }
+
+    button.addCardButton {
+        background: url('../img/greenDone.png') center center / 100% 100% no-repeat;
+        background-size: 30px;
+        height: 48px;
+        width: 50%;
+        border: none;
+        border-left: none;
+        background-color: var(--green-color);
+        position: relative;
+        left: 0px;
+    }
+
+    button.removeButton {
+        background: url('../img/remove.png') center center / 100% 100% no-repeat;
+        background-size: 30px;
+        height: 48px;
+        width: 50px;
+        border: none;
+        border-left: none;
+        background-color: var(--red-color);
+        position: relative;
+        right: 0px;
     }
 }
