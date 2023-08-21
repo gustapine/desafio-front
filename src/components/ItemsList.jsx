@@ -9,9 +9,9 @@ const ItemsList = () => {
     
   return (
     <div className='itemsList'>
-    {itemsList.map((itemToDo, index) => (
+    {itemsList.map((itemToDo) => (
         <ItemToDo
-          key={index}
+          key={itemToDo.key}
           description={itemToDo.description}
         />    
     ))}
