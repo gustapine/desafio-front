@@ -1,34 +1,34 @@
-import React, { useState } from 'react'
-import './Add.css'
-import itemsToDo from '../itemsToDo'
-import ItemToDo from './ItemToDo.jsx'
+import React, { useState } from 'react';
+import './Add.css';
+import itemsToDo from '../itemsToDo';
+import ItemToDo from './ItemToDo'
 
 const Add = () => {
-    const [selecionadoAdd, setIsSelected] = useState(false);
-    const [items, setItems] = useState('')
+  const [selecionadoAdd, setIsSelected] = useState(false);
+  const [itemDescription, setItemDescription] = useState('');
 
+  const onMouseEffect = () => {
+    setIsSelected(!selecionadoAdd);
+  }
 
-    const onMouseEffect = () => {
-        setIsSelected(!selecionadoAdd);
-    }
+  const handleAddItem = (event) => {
+    event.preventDefault();
+    addNewItem(itemDescription);
+    setItemDescription('');
+  }
 
-    const handleAddItem = (event) => {
+  const addNewItem = (description) => {
+    const newItems = {
+      description: description,
+      key: 333,
+      isCompleted: false
+    };
 
-        event.preventDefault()
-        addNewItem(items)
-        setItems('')
-    }
+    // Assuming that `itemsToDo` is an array, you can add the new item to it like this:
+    itemsToDo.push(newItems);
 
-    const addNewItem = (description) => {
-        const newItems = {
-            key: window.crypto.randomUUID(),
-            description: description,
-            isCompleted: false
-        }
-
-        setItems([...items, newItems])
-        console.log(items)
-    }
+    console.log(itemsToDo);
+  }
 
     return (
         <div>
@@ -36,8 +36,8 @@ const Add = () => {
             <form onSubmit={handleAddItem}>
                 <input id='getNewItem' className={`addInput ${selecionadoAdd ? 'selecionadoAdd' : ''}`}
                     onMouseOver={onMouseEffect} onMouseLeave={onMouseEffect}
-                    onChange={e => setItems(e.target.value)}
-                    value={items}
+                    onChange={e => setItemDescription(e.target.value)}
+                    value={itemDescription}
                     placeholder='Add new item...'
                 />
                 <button className='addButton' type="submit"><strong>+</strong></button>

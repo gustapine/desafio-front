@@ -79,7 +79,8 @@ strong {
 }
 
 .itemsList{
-    border: 1px solid red;
+    border: 0px solid red;
     margin-top: 16px;
     overflow: scroll;
+    max-height: 350px;
 }
