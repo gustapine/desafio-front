@@ -53,6 +53,10 @@ strong {
 }
 
 @media (min-width: 768px) {
+    .itemsList{
+        border: 1px solid none;
+    }
+
     .addForm {
         margin-top: 20px;
         opacity: 0.5;
@@ -72,4 +76,10 @@ strong {
         background-color:var(--color-v1) ;
         color:var(--cor-primaria);
     }
+}
+
+.itemsList{
+    border: 1px solid red;
+    margin-top: 16px;
+    overflow: scroll;
 }

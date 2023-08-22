@@ -4,7 +4,6 @@ import Progress from './components/Progress'
 import Search from './components/Search'
 import Filter from './components/Filter'
 import Add from './components/Add'
-import ItemsList from './components/ItemsList'
 
 const App = () => {
   return (
@@ -14,7 +13,6 @@ const App = () => {
         <Search/>
         <Filter/>
         <Add/>
-        <ItemsList/>
     </div>
   )
 }

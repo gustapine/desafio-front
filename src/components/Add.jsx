@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import './Add.css'
 import itemsToDo from '../itemsToDo'
+import ItemToDo from './ItemToDo.jsx'
 
 const Add = () => {
     const [selecionadoAdd, setIsSelected] = useState(false);
     const [items, setItems] = useState('')
-    const [itemToDo, setItemToDo] = useState([])
+
 
     const onMouseEffect = () => {
         setIsSelected(!selecionadoAdd);
@@ -25,12 +26,13 @@ const Add = () => {
             isCompleted: false
         }
 
-        setItemToDo([...itemsToDo, newItems])
-        console.log(itemToDo)
+        setItems([...items, newItems])
+        console.log(items)
     }
 
     return (
-        <div className={`addForm ${selecionadoAdd ? 'selecionadoAdd' : ''}`} onMouseOver={onMouseEffect} onMouseLeave={onMouseEffect}>
+        <div>
+            <div className={`addForm ${selecionadoAdd ? 'selecionadoAdd' : ''}`} onMouseOver={onMouseEffect} onMouseLeave={onMouseEffect}>
             <form onSubmit={handleAddItem}>
                 <input id='getNewItem' className={`addInput ${selecionadoAdd ? 'selecionadoAdd' : ''}`}
                     onMouseOver={onMouseEffect} onMouseLeave={onMouseEffect}
@@ -40,6 +42,16 @@ const Add = () => {
                 />
                 <button className='addButton' type="submit"><strong>+</strong></button>
             </form>
+            </div>
+            <div className='itemsList'>
+                {itemsToDo.map((itemToDo) => (
+                    <ItemToDo
+                        key={itemToDo.key}
+                        description={itemToDo.description}
+                        isCompleted={itemToDo.isCompleted}
+                    />    
+                ))}
+            </div>
         </div>
     )
 }
