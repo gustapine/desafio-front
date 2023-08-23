@@ -9,7 +9,7 @@ const Add = () => {
 
   const onMouseEffect = () => {
     setIsSelected(!selecionadoAdd);
-  }
+  }  
 
   const handleAddItem = (event) => {
     event.preventDefault();

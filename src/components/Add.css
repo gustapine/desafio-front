@@ -78,9 +78,27 @@ strong {
     }
 }
 
-.itemsList{
+.itemsList {
     border: 0px solid red;
     margin-top: 16px;
-    overflow: scroll;
+    overflow-x: auto;
     max-height: 350px;
+}
+
+.itemsList::-webkit-scrollbar {
+    width: 8px; 
+}
+
+.itemsList::-webkit-scrollbar-thumb {
+    background-color: #adacac;
+    border-radius: 6px;
+}
+
+.itemsList::-webkit-scrollbar-thumb:hover {
+    background-color: #848484; 
+}
+
+.itemsList::-webkit-scrollbar-track {
+    background-color: #f1f1f1; 
+    border-radius: 20px;
 }

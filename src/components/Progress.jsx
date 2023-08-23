@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
 import './Progress.css'
+import Add from './Add'
 
 const Progress = (props) => {
 
-  const progressValue = document.querySelectorAll('.itemCard').length * 10
-
   return (
     <div className='progressDiv'>
-      <div className='progressContainer'>  <progress value={progressValue} max="100"></progress></div>
+      <div className='progressContainer'>  <progress value='50' max="100"></progress></div>
     </div>
   )
 }
