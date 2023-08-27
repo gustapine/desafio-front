@@ -19,8 +19,8 @@ const ItemToDo = (props) => {
         <p>{props.description}</p>
         <div className={`Tooltip ${!createElement && 'card-tooltip-none'} `} id={`${createElement ? 'card-tooltip' : ''} `}><span id={`${createElement ? 'card-tooltip' : ''}`}>Edit task</span></div>
         <div className={`${edit ? 'buttonsCard' : 'buttonsCardDisplay' }`}>
-          <button className={`${edit ? 'removeButton' : 'buttonsCardDisplay' }`}></button>
-          <button className={`${edit ? 'addCardButton' : 'buttonsCardDisplay' }`}></button>
+          <button className={`${edit ? 'removeButton' : 'buttonsCardDisplay' }`} onClick={() => props.onDelete(props.id)}></button>
+          <button className={`${edit ? 'addCardButton' : 'buttonsCardDisplay' }`} onClick={() => props.onComplete(props.id)}></button>
         </div>
       </div>
     </div>

@@ -6,6 +6,7 @@ import ItemToDo from './ItemToDo'
 const Add = () => {
   const [selecionadoAdd, setIsSelected] = useState(false);
   const [itemDescription, setItemDescription] = useState('');
+  const [items, setItems] = useState(itemsToDo)
 
   const onMouseEffect = () => {
     setIsSelected(!selecionadoAdd);
@@ -20,15 +21,28 @@ const Add = () => {
   const addNewItem = (description) => {
     const newItems = {
       description: description,
-      key: 333,
+      id: window.crypto.randomUUID(),
       isCompleted: false
     };
+    const renderItems = [...items]
+    renderItems.push(newItems)
+    setItems(renderItems)
+    }
 
-    // Assuming that `itemsToDo` is an array, you can add the new item to it like this:
-    itemsToDo.push(newItems);
-
-    console.log(itemsToDo);
+  const removeItem = (id) => {
+    setItems(itemsToDo.filter(itemToDo => itemToDo.id !== id))
+    console.log("deleted", id)
   }
+
+  const completeItem = (id) => {
+    const updatedItems = items.map((itemToDo) => {
+      if (itemToDo.id === id) {
+        return { ...itemToDo, isCompleted: true };
+      }
+      return itemToDo;
+    });
+      setItems(updatedItems)
+  };
 
     return (
         <div>
@@ -44,9 +58,12 @@ const Add = () => {
             </form>
             </div>
             <div className='itemsList'>
-                {itemsToDo.map((itemToDo) => (
+                {items.map((itemToDo) => (
                     <ItemToDo
-                        key={itemToDo.key}
+                        onDelete={removeItem}
+                        onComplete={completeItem}
+                        key={itemToDo.id}
+                        id={itemToDo.id}
                         description={itemToDo.description}
                         isCompleted={itemToDo.isCompleted}
                     />    

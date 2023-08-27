@@ -1,26 +1,26 @@
 const itemsToDo =[
     {
-        key: 1,
+        id: 1,
         description: 'Drive a Cadillac across the Irish Sea',
         isCompleted: false
     },
     {
-        key: 2,
+        id: 2,
         description: 'Sell an elevator to Geronimo',
         isCompleted: false
     },
     {
-        key: 3,
+        id: 3,
         description: 'Take a pound of love and cook it in the stew',
         isCompleted: false
     },
     {
-        key: 4,
+        id: 4,
         description: "Dont't let them tell you what you wanna be",
         isCompleted: false
     },
     {
-        key: 5,
+        id: 5,
         description: 'Do a great job and join the best Product team...',
         isCompleted: false
     }
