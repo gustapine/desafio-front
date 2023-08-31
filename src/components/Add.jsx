@@ -27,7 +27,7 @@ const Add = () => {
     const renderItems = [...items]
     renderItems.push(newItems)
     setItems(renderItems)
-    }
+  }
 
   const removeItem = (id) => {
     setItems(itemsToDo.filter(itemToDo => itemToDo.id !== id))
@@ -37,7 +37,7 @@ const Add = () => {
   const completeItem = (id) => {
     const updatedItems = items.map((itemToDo) => {
       if (itemToDo.id === id) {
-        return { ...itemToDo, isCompleted: true };
+        return { ...itemToDo, isCompleted: !itemToDo.isCompleted };
       }
       return itemToDo;
     });
@@ -61,7 +61,7 @@ const Add = () => {
                 {items.map((itemToDo) => (
                     <ItemToDo
                         onDelete={removeItem}
-                        onComplete={completeItem}
+                        onChange={completeItem}
                         key={itemToDo.id}
                         id={itemToDo.id}
                         description={itemToDo.description}
